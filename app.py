@@ -16,13 +16,13 @@ app.title = "IFI en France"
 server = app.server
 
 # Importation des fichiers Excel en utilisant Pandas
-df_2019 = pd.read_excel("C:\\Users\\cutie\\Documents\\IFI BERTIN\\IFIrégions2019.xlsx")
-df_2020 = pd.read_excel("C:\\Users\\cutie\\Documents\\IFI BERTIN\\IFIrégions2020.xlsx")
-df_2021 = pd.read_excel("C:\\Users\\cutie\\Documents\\IFI BERTIN\\IFIrégions2021.xlsx")
+df_2019 = pd.read_excel("IFIrégions2019.xlsx")
+df_2020 = pd.read_excel("IFIrégions2020.xlsx")
+df_2021 = pd.read_excel("IFIrégions2021.xlsx")
 
 # Concaténation des données des trois années
 df = pd.concat([df_2019, df_2020, df_2021])
-geofrance = "C:\\Users\\cutie\\Documents\\IFI BERTIN\\regions.geojson"
+geofrance = "regions.geojson"
 
 # Créer un choropleth pour 2019 en utilisant la colonne patrimoine_moyen
 m_2019 = folium.Map(location=[46.2276, 2.2137], zoom_start=6)
